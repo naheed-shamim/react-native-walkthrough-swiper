@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 import {
   Dimensions,
   I18nManager,
   Pressable,
   StyleSheet,
   Text,
-} from "react-native";
-import { BackgroundImages } from "./components/BackgroundImage";
-import Pagination from "./components/PaginationBtn";
-import SpringText from "./components/SpringText";
-import GestureRecognizer from "./components/gesture-recogniser";
+} from 'react-native';
+import { BackgroundImages } from './BackgroundImage';
+import Pagination from './PaginationBtn';
+import SpringText from './SpringText';
+import GestureRecognizer from './gesture-recogniser';
 
-const windowHeight = Dimensions.get("window").height;
+const windowHeight = Dimensions.get('window').height;
 const isRTL = I18nManager.isRTL;
 
 const WalkthroughSwiper = ({
@@ -106,27 +106,27 @@ export default WalkthroughSwiper;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
+    alignItems: 'center',
   },
   skipContainer: {
-    position: "absolute",
+    position: 'absolute',
     right: 20,
     top: windowHeight * 0.06,
     height: 80,
   },
   skipText: {
     fontSize: 16,
-    fontFamily: "Arada",
-    color: "#5A5A5A",
-    textDecorationLine: "underline",
+    fontFamily: 'Arada',
+    color: '#5A5A5A',
+    textDecorationLine: 'underline',
   },
   nextBtnContainer: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 26,
     right: 12,
     width: 40,
     height: 40,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

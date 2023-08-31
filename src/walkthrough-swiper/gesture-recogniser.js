@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import { PanResponder, View } from "react-native";
-// react-native-walkthrough-swiper
-// This adds walkthrough pages with configurable animation effects
 export const swipeDirections = {
   SWIPE_UP: "SWIPE_UP",
   SWIPE_DOWN: "SWIPE_DOWN",

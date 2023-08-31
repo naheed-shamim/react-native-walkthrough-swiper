@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from "react";
-import { StyleSheet } from "react-native";
+import React, { useEffect, useRef } from 'react';
+import { StyleSheet } from 'react-native';
 import Reanimated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
-} from "react-native-reanimated";
+} from 'react-native-reanimated';
 
-export const BackgroundImages = ({ data, currentSlide }) => {
+const BackgroundImages = ({ data, currentSlide }) => {
   const animationVars = useRef(
     data.map(() => ({
       alpha: useSharedValue(0),
@@ -68,3 +68,5 @@ const styles = StyleSheet.create({
     opacity: 0.4,
   },
 });
+
+export default React.memo(BackgroundImages);
