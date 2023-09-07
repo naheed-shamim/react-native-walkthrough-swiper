@@ -1,31 +1,25 @@
-// import * as React from 'react';
+import * as React from 'react';
 
-// import { StyleSheet, View, Text } from 'react-native';
-// import { multiply } from 'react-native-walkthrough-swiper';
+import { StyleSheet, View } from 'react-native';
+// import { WalkthroughSwiper} from 'react-native-walkthrough-swiper';
 
-// export default function App() {
-//   const [result, setResult] = React.useState<number | undefined>();
+export default function App() {
+  return (
+    <View style={styles.container}>
+      {/* <WalkthroughSwiper color="#32a852" style={styles.box} /> */}
+    </View>
+  );
+}
 
-//   React.useEffect(() => {
-//     multiply(3, 7).then(setResult);
-//   }, []);
-
-//   return (
-//     <View style={styles.container}>
-//       <Text>Result: {result}</Text>
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   box: {
-//     width: 60,
-//     height: 60,
-//     marginVertical: 20,
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  box: {
+    width: 60,
+    height: 60,
+    marginVertical: 20,
+  },
+});

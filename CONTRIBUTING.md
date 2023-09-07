@@ -34,11 +34,34 @@ To run the example app on iOS:
 yarn example ios
 ```
 
-To run the example app on Web:
+By default, the example is configured to build with the old architecture. To run the example with the new architecture, you can do the following:
+
+1. For Android, run:
+
+   ```sh
+   ORG_GRADLE_PROJECT_newArchEnabled=true yarn example android
+   ```
+
+2. For iOS, run:
+
+   ```sh
+   RCT_NEW_ARCH_ENABLED=1 yarn example pods
+   yarn example ios
+   ```
+
+If you are building for a different architecture than your previous build, make sure to remove the build folders first. You can run the following command to cleanup all build folders:
 
 ```sh
-yarn example web
+yarn clean
 ```
+
+To confirm that the app is running with the new architecture, you can check the Metro logs for a message like this:
+
+```sh
+Running "WalkthroughSwiperExample" with {"fabric":true,"initialProps":{"concurrentRoot":true},"rootTag":1}
+```
+
+Note the `"fabric":true` and `"concurrentRoot":true` properties.
 
 Make sure your code passes TypeScript and ESLint. Run the following to verify:
 
@@ -58,6 +81,10 @@ Remember to add tests for your change if possible. Run the unit tests by:
 ```sh
 yarn test
 ```
+
+To edit the Objective-C or Swift files, open `example/ios/WalkthroughSwiperExample.xcworkspace` in XCode and find the source files at `Pods > Development Pods > react-native-walkthrough-swiper`.
+
+To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-walkthrough-swiper` under `Android`.
 
 
 ### Commit message convention

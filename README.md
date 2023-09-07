@@ -1,6 +1,6 @@
 # react-native-walkthrough-swiper
 
-This adds walkthrough pages with configurable animation effects
+Swiper intro
 
 ## Installation
 
@@ -11,11 +11,11 @@ npm install react-native-walkthrough-swiper
 ## Usage
 
 ```js
-import WalkthroughSwiper from 'react-native-walkthrough-swiper';
+import { WalkthroughSwiperView } from "react-native-walkthrough-swiper";
 
 // ...
 
-
+<WalkthroughSwiperView color="tomato" />
 ```
 
 ## Contributing
@@ -27,3 +27,5 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 MIT
 
 ---
+
+Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
