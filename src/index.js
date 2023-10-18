@@ -5,6 +5,7 @@ import {
   Pressable,
   StyleSheet,
   Text,
+  View
 } from 'react-native';
 import { BackgroundImages } from './components/BgImage';
 import Pagination from './components/PaginationBtn';
@@ -14,7 +15,7 @@ import GestureRecognizer from './components/SwipeRecogniser';
 const windowHeight = Dimensions.get('window').height;
 const isRTL = I18nManager.isRTL;
 
-const RNWalkthroughSwiper = ({
+export const WalkthroughSwiper = ({
   data,
   onSkipBtnPress,
   skipText,
@@ -23,6 +24,7 @@ const RNWalkthroughSwiper = ({
   subTitleStyle,
   nextButton,
   centerComponent,
+  centerStyle,
 }) => {
   const [currentIndex, setCurrIndex] = React.useState(0);
 
@@ -51,6 +53,12 @@ const RNWalkthroughSwiper = ({
       <Pressable style={styles.skipContainer} onPress={onSkipBtnPress}>
         <Text style={[styles.skipText, skipTextStyle]}>{skipText}</Text>
       </Pressable>
+    );
+  };
+
+  const _renderCenterView = () => {
+    return (
+      <View style={[styles.centerView, centerStyle]}>{centerComponent}</View>
     );
   };
 
@@ -96,12 +104,13 @@ const RNWalkthroughSwiper = ({
       {paginationBtn}
       {_renderSkipButton()}
       {_renderNextButton()}
-      {centerComponent}
+      {_renderCenterView()}
     </GestureRecognizer>
   );
 };
 
-export const WalkthroughSwiper = React.memo(RNWalkthroughSwiper);
+// export const WalkthroughSwiper = React.memo(RNWalkthroughSwiper);
+// export const WalkthroughSwiper = React.memo(RNWalkthroughSwiper);
 
 const styles = StyleSheet.create({
   container: {
@@ -128,5 +137,9 @@ const styles = StyleSheet.create({
     height: 40,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  centerView: {
+    height: '30%',
+    justifyContent: 'center',
   },
 });

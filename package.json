@@ -1,12 +1,11 @@
 {
   "name": "react-native-walkthrough-swiper",
-  "version": "0.1.3",
+  "version": "0.1.11",
   "description": "Swiper intro",
-  "source": "src/index.js",
-  "react-native": "src/index.js",
-  "main": "lib/module/index.js",
   "module": "lib/module/index.js",
-  "types": "lib/typescript/src/index.d.ts",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index.js",
+  "source": "src/index.js",
   "files": [
     "src",
     "lib",
@@ -21,9 +20,6 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
@@ -64,6 +60,8 @@
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
@@ -74,7 +72,7 @@
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.4",
-    "react-native-builder-bob": "^0.20.0",
+    "react-native-builder-bob": "^0.20.4",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
     "typescript": "5.1.6"
@@ -155,12 +153,7 @@
     "targets": [
       "commonjs",
       "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
   },
   "codegenConfig": {
