@@ -16,7 +16,7 @@ const PAGINATION_SPRING_CONFIG = {
   stiffness: 100,
 };
 
-const Pagination = ({ data, currentSlide }) => {
+const Pagination = ({ data, currentSlide, inActiveSlideColor='#CFD2D4', activeSlideColor='#130C1A' }) => {
   const oldSlide = useRef(currentSlide);
   const animationVars = useRef(data.map(() => useSharedValue(0)));
   const selectedPos = useSharedValue(0);
@@ -66,7 +66,7 @@ const Pagination = ({ data, currentSlide }) => {
   return (
     <View style={styles.components}>
       {data.map((_, index) => {
-        const style = index === 0 ? styles.selected : styles.oval;
+        const style = index === 0 ? [styles.selected, {backgroundColor:activeSlideColor}] : [styles.oval, {backgroundColor:inActiveSlideColor}];
 
         return (
           <Reanimated.View

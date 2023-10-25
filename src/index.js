@@ -5,7 +5,7 @@ import {
   Pressable,
   StyleSheet,
   Text,
-  View
+  View,
 } from 'react-native';
 import { BackgroundImages } from './components/BgImage';
 import Pagination from './components/PaginationBtn';
@@ -25,6 +25,8 @@ export const WalkthroughSwiper = ({
   nextButton,
   centerComponent,
   centerStyle,
+  activeSlideColor,
+  inActiveSlideColor,
 }) => {
   const [currentIndex, setCurrIndex] = React.useState(0);
 
@@ -89,7 +91,12 @@ export const WalkthroughSwiper = ({
   );
 
   const paginationBtn = data.length > 0 && (
-    <Pagination data={data} currentSlide={currentIndex} />
+    <Pagination
+      data={data}
+      currentSlide={currentIndex}
+      activeSlideColor={activeSlideColor}
+      inActiveSlideColor={inActiveSlideColor}
+    />
   );
 
   return (
