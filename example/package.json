@@ -1,26 +1,27 @@
 {
-  "name": "example",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "WalkthroughSwiperExample",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "pods": "pod-install --quiet"
   },
   "dependencies": {
-    "expo": "~49.0.8",
-    "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
-    "react-native": "0.72.4",
-    "react-dom": "18.2.0",
-    "react-native-web": "~0.19.6"
+    "react-native": "0.72.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "babel-plugin-module-resolver": "^5.0.0",
-    "@expo/webpack-config": "^18.0.1",
-    "babel-loader": "^8.1.0"
+    "@babel/preset-env": "^7.20.0",
+    "@babel/runtime": "^7.20.0",
+    "@react-native/eslint-config": "^0.72.2",
+    "@react-native/metro-config": "^0.72.11",
+    "metro-react-native-babel-preset": "0.76.8",
+    "babel-plugin-module-resolver": "^5.0.0"
   },
-  "private": true
+  "engines": {
+    "node": ">=16"
+  }
 }

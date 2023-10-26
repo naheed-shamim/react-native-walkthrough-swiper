@@ -1,12 +1,11 @@
 {
   "name": "react-native-walkthrough-swiper",
-  "version": "0.1.0",
-  "description": "This adds walkthrough pages with configurable animation effects",
-  "main": "lib/commonjs/index.js",
+  "version": "0.1.2",
+  "description": "Swiper intro",
   "module": "lib/module/index.js",
   "types": "lib/typescript/index.d.ts",
-  "react-native": "src/index.js",
-  "source": "src/index.js",
+  "react-native": "index.js",
+  "main": "index.js",
   "files": [
     "src",
     "lib",
@@ -21,9 +20,6 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
@@ -33,7 +29,10 @@
     "prepack": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
-    "bootstrap": "yarn example && yarn install"
+    "build:android": "cd example/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
+    "build:ios": "cd example/ios && xcodebuild -workspace WalkthroughSwiperExample.xcworkspace -scheme WalkthroughSwiperExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
+    "bootstrap": "yarn example && yarn install && yarn example pods",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
   },
   "keywords": [
     "react-native",
@@ -50,6 +49,9 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "dependencies": {
+    "react-native-reanimated": "2.14.4"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.2.2",
@@ -58,6 +60,8 @@
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
     "eslint": "^8.4.1",
@@ -68,9 +72,10 @@
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.4",
-    "react-native-builder-bob": "^0.21.3",
+    "react-native-builder-bob": "^0.20.4",
     "release-it": "^15.0.0",
-    "typescript": "^5.0.2"
+    "turbo": "^1.10.7",
+    "typescript": "5.1.6"
   },
   "resolutions": {
     "@types/react": "17.0.21"
@@ -150,5 +155,10 @@
       "module",
       "typescript"
     ]
+  },
+  "codegenConfig": {
+    "name": "RNWalkthroughSwiperViewSpec",
+    "type": "components",
+    "jsSrcsDir": "src"
   }
 }
