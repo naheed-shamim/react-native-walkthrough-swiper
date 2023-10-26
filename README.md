@@ -51,7 +51,7 @@ const data = [
     title: 'Slide 1',
     subTitle: 'Uses Reanimated API',
     age: 29,
-    bgImage: imgs[0],
+    bgImage: 'some image URI',
   },
   ...
   ]
