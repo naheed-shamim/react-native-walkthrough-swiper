@@ -30,20 +30,20 @@ import { WalkthroughSwiper } from  'react-native-walkthrough-swiper';
 // ...
 
 <WalkthroughSwiper
-data={sliderData}
-skipText={'Skip'}
-skipTextStyle={{ color:  '#ccc' }}
-nextButton={<Text  style={{ color:  '#ccc' }}>{'Next'}</Text>}
-centerComponent={
-<Text  style={{ fontSize:  40, color:  'white' }}>{'Your App'}</Text>
-}
-titleStyle={{ color:  'white' }}
-subTitleStyle={{ color:  'white' }}
-activeSlideColor={'#fff'}
-inActiveSlideColor={'#b2b2b2'}
-onSkipBtnPress={() => {
-// Navigate to the next screen
-}}
+    data={sliderData}
+    skipText={'Skip'}
+    skipTextStyle={{ color:  '#ccc' }}
+    nextButton={<Text  style={{ color:  '#ccc' }}>{'Next'}</Text>}
+    centerComponent={
+    <Text  style={{ fontSize:  40, color:  'white' }}>{'Your App'}</Text>
+    }
+    titleStyle={{ color:  'white' }}
+    subTitleStyle={{ color:  'white' }}
+    activeSlideColor={'#fff'}
+    inActiveSlideColor={'#b2b2b2'}
+    onSkipBtnPress={() => {
+    // Navigate to the next screen
+    }}
 />;
 
 const data = [
@@ -55,7 +55,8 @@ const data = [
   },
   ...
   ]
-
+  
+  ```
 ### Properties
 
 | Prop                     | Description                                                     | Types             |
@@ -69,7 +70,7 @@ const data = [
 | **`subTitleStyle`**      | Styles for the sub-title.                                       | `TextStyle`       |
 | **`activeSlideColor`**   | Active Slide color (circle dot at bottom).                      | `string`          |
 | **`inActiveSlideColor`** | Inactive slide color.                                           | `string`          |
-| **`onSkipBtnPress`**     | Event to trigger on press of Skip Button.                       | `Event`           |
+| **`onSkipBtnPress`**     | Event to trigger on press of Skip Button.                       | `GestureResponderEvent`           |
 ```
 
 ## License
