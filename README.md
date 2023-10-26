@@ -9,7 +9,7 @@ A Intro Swiper component for React-Native. Uses Reanimated API to create smooth 
 
 ## Demo
 
-![Demo](https://github.com/naheed-shamim/react-native-walkthrough-swiper/blob/main/example/assets/demo.gif?raw=true) "Library Demo")
+![Demo](https://github.com/naheed-shamim/react-native-walkthrough-swiper/blob/main/example/assets/demo.gif?raw=true)
 
 ## Installation
 
