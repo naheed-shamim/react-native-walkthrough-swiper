@@ -7,7 +7,7 @@
 
 import React from 'react';
 import { Text, View } from 'react-native';
-import { WalkthroughSwiper } from 'react-native-walkthrough-swiper';
+import { WalkthroughSwiper } from 'src/WalkthroughSwiper';
 
 const sampleData = [
   {
