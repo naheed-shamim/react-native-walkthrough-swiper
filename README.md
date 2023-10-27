@@ -14,15 +14,17 @@ A Intro Swiper component for React-Native. Uses Reanimated API to create smooth 
 
 ## Installation
 
-  
 
 ```sh
-
 npm  install  react-native-walkthrough-swiper
-
+or
+yarn add react-native-walkthrough-swiper
 ```
 
-  
+
+
+> **React Native Reanimated** is essential for this and must be installed. Follow the installation steps here:  [react-native-reanimated](https://www.npmjs.com/package/react-native-reanimated)
+
 
 ## Usage
 
@@ -33,23 +35,24 @@ npm  install  react-native-walkthrough-swiper
 import { WalkthroughSwiper } from  'react-native-walkthrough-swiper';
 
 // ...
-
-<WalkthroughSwiper
-    data={sliderData}
-    skipText={'Skip'}
-    skipTextStyle={{ color:  '#ccc' }}
-    nextButton={<Text  style={{ color:  '#ccc' }}>{'Next'}</Text>}
-    centerComponent={
-    <Text  style={{ fontSize:  40, color:  'white' }}>{'Your App'}</Text>
-    }
-    titleStyle={{ color:  'white' }}
-    subTitleStyle={{ color:  'white' }}
-    activeSlideColor={'#fff'}
-    inActiveSlideColor={'#b2b2b2'}
-    onSkipBtnPress={() => {
-    // Navigate to the next screen
-    }}
-/>;
+<View style={{flex:1}}>
+  <WalkthroughSwiper
+      data={sliderData}
+      skipText={'Skip'}
+      skipTextStyle={{ color:  '#ccc' }}
+      nextButton={<Text  style={{ color:  '#ccc' }}>{'Next'}</Text>}
+      centerComponent={
+      <Text  style={{ fontSize:  40, color:  'white' }}>{'Your App'}</Text>
+      }
+      titleStyle={{ color:  'white' }}
+      subTitleStyle={{ color:  'white' }}
+      activeSlideColor={'#fff'}
+      inActiveSlideColor={'#b2b2b2'}
+      onSkipBtnPress={() => {
+      // Navigate to the next screen
+      }}
+  />
+</View>
 
 const data = [
 {
@@ -76,12 +79,9 @@ const data = [
 | **`activeSlideColor`**   | Active Slide color (circle dot at bottom).                      | `string`          |
 | **`inActiveSlideColor`** | Inactive slide color.                                           | `string`          |
 | **`onSkipBtnPress`**     | Event to trigger on press of Skip Button.                       | `GestureResponderEvent`           |
-```
 
-## License
-
+### License
 MIT
-
 ---
 
  
