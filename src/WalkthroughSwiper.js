@@ -116,9 +116,6 @@ export const WalkthroughSwiper = ({
   );
 };
 
-// export const WalkthroughSwiper = React.memo(RNWalkthroughSwiper);
-// export const WalkthroughSwiper = React.memo(RNWalkthroughSwiper);
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
