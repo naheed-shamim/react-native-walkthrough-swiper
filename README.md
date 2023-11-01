@@ -1,4 +1,6 @@
-[![npm version](https://www.npmjs.com/package/react-native-walkthrough-swiper.svg)](http://badge.fury.io/js/react-native-walkthrough-swiper)
+[![npm version](https://badge.fury.io/js/react-native-walkthrough-swiper.svg)](http://badge.fury.io/js/react-native-walkthrough-swiper)
+[![npm total downloads](https://img.shields.io/npm/dt/react-native-walkthrough-swiper.svg)](https://img.shields.io/npm/dt/rn-dashed-circular-indicator.svg)
+
 
 # react-native-walkthrough-swiper
 
